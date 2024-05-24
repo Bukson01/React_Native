@@ -1,10 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { Button, StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Oluchukwuebuka!!!</Text>
+      <View>
+        <Text>Another text to write</Text>
+      </View>
+      <Text>Oluchukwuebuka!!</Text>
+      <Button title="Press me"/>
     </View>
+    
   );
 }
 
