@@ -4,9 +4,9 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View>
-        <Text>Another text to write</Text>
+        <Text style={styles.dummyText}>Another text to write</Text>
       </View>
-      <Text style={{margin:16, borderWidth:2, borderColor:'red', padding:16}}>Oluchukwuebuka!!</Text>
+      <Text style={styles.dummyText}>Oluchukwuebuka!!</Text>
       <Button title="Tap me"/>
     </View>
     
