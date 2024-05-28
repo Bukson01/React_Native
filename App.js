@@ -7,7 +7,7 @@ export default function App() {
         <Text>Another text to write</Text>
       </View>
       <Text>Oluchukwuebuka!!</Text>
-      <Button title="Press me"/>
+      <Button title="Tap me"/>
     </View>
     
   );
