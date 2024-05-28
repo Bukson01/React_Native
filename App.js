@@ -6,7 +6,7 @@ export default function App() {
       <View>
         <Text>Another text to write</Text>
       </View>
-      <Text>Oluchukwuebuka!!</Text>
+      <Text style={{margin:16, borderWidth:2, borderColor:'red', padding:16}}>Oluchukwuebuka!!</Text>
       <Button title="Tap me"/>
     </View>
     
@@ -19,5 +19,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+
+  dummyText: {
+    margin:16,
+    borderWidth: 2,
+    borderColor: 'red',
+    padding: 16
   },
 });
