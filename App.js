@@ -11,7 +11,7 @@ export default function App() {
 
   function addGoalHandler () {
     setCourseGoals(currentCourseGoals=>[...currentCourseGoals, enteredGoalText, 
-      
+
     ]);
   };
 
@@ -22,7 +22,7 @@ export default function App() {
         <Button title="Add Goal" onPress={addGoalHandler}/>
       </View>
       <View style={styles.goalsContainer}>
-        <Text>List of goals...</Text>
+        {courseGoals.map((goal)=><Text key={goal}>{goal}</Text>)}
       </View>
     </View>
     
