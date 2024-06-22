@@ -5,10 +5,10 @@ import GoalItem from './components/goalItem';
 import Goalinput from './components/goalInput';
 
 export default function App() {
-  const [modalIsVisiblec, setModalIsVisible] = useState(false)
+  const [modalIsVisible, setModalIsVisible] = useState(false);
   const [courseGoals, setCourseGoals]=useState([]);
 
-  function setAddGoalHandler () {
+  function startAddGoalHandler () {
     setModalIsVisible(true);
   }
 
@@ -27,23 +27,27 @@ export default function App() {
 
   return (
     <View style={styles.appContainer}>
-      <Button title='Add Goal' color='#FF7F50'/>
-      <Goalinput onAddGoal={addGoalHandler}/>
-      <View style={styles.goalsContainer}>
-      <FlatList data={courseGoals}  renderItem={itemData =>{
-        return <GoalItem 
-                  text={itemData.item.text} 
-                  id={itemData.item.id}
-                  onDeleteItem={deleteGoalHandler}/>;
-      }}
+        <Button 
+          title='Add Goal' 
+          color='#FF7F50' 
+          onPress={startAddGoalHandler}
+        />
+        <Goalinput onAddGoal={addGoalHandler}/>
+        <View style={styles.goalsContainer}>
+          <FlatList data={courseGoals}  renderItem={itemData =>{
+            return <GoalItem 
+                      text={itemData.item.text} 
+                      id={itemData.item.id}
+                      onDeleteItem={deleteGoalHandler}/>;
+          }}
 
-      keyExtractor={(item, index)=>{
-        return item.id;
-      }}
-      keyboardDismissMode='on-drag' 
-      />
+          keyExtractor={(item, index)=>{
+            return item.id;
+          }}
+          keyboardDismissMode='on-drag' 
+          />
 
-      </View>
+        </View>
     </View>
     
   );
