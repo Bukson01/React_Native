@@ -13,16 +13,17 @@ function Goalinput(props) {
         setEnteredGoalText('');
     };
 
-    return <Modal>
+    return ( <Modal>
       <View style={styles.inputContainer}>
-        <TextInput 
-          style={styles.textInput} placeholder='Your course goal'
-          onChangeText={goalInputHandler} 
-          value={enteredGoalText}
-        />
-        <Button title="Add Goal" onPress={addGoalHandler}/>
-    </View>; 
-  </Modal>
+          <TextInput 
+            style={styles.textInput} placeholder='Your course goal'
+            onChangeText={goalInputHandler} 
+            value={enteredGoalText}
+          />
+          <Button title="Add Goal" onPress={addGoalHandler}/>
+      </View>
+    </Modal>
+    );
 };
 
 export default Goalinput;
