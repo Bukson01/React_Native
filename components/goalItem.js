@@ -8,7 +8,7 @@ function GoalItem(prop) {
               onPress={prop.onDeleteItem.bind(this, prop.id)}
               style={({pressed}) => pressed && styles.pressItem}
           >
-            <Text tyle= {styles.goalText}>{ prop.text }</Text>
+            <Text style= {styles.goalText}>{ prop.text }</Text>
           </Pressable>
         </View>
       )
