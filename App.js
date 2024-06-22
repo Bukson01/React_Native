@@ -15,12 +15,16 @@ export default function App() {
     ]);
   };
 
+  function deleteGoalHandler() {
+    console.log('DELETE')
+  };
+
   return (
     <View style={styles.appContainer}>
       <Goalinput onAddGoal={addGoalHandler}/>
       <View style={styles.goalsContainer}>
       <FlatList data={courseGoals}  renderItem={itemData =>{
-        return <GoalItem text={itemData.item.text}/>;
+        return <GoalItem text={itemData.item.text} onDeleteItem={deleteGoalHandler}/>;
       }}
 
       keyExtractor={(item, index)=>{
